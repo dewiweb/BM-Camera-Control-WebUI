@@ -30,7 +30,7 @@ function initCamera() {
 
     try {
         // Check if the hostname is valid
-        let response = sendRequest("GET", (security ? "https://" : "http://")+hostname+"/control/api/v1/system","");
+        let response = sendRequest("GET", (security ? "https://" : "http://")+hostname+"/control/api/v1/system/format","");
 
         if (response.status < 300) {
             // Success, make a new camera, get all relevant info, and populate the UI
